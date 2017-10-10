@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Smart TV</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="../css/mcafee.css">
+
+<!-- 마크업 확인용 -->
+<script src="../script/jquery.min.js"></script>
+<script src="../script/jquery.bxslider.js"></script>
+<script src="../script/markup.js"></script>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+<!-- //마크업 확인용 -->
+</head>
+<body>
+<div id="wrap"> 
+  <!-- 모바일 메뉴 활성화시 class="navOn" 추가 -->
+  <header id="header">
+    <div id="logo"> <a href="main.html"> <img src="../images/logo.svg" alt="McAfee"> </a> </div>
+    <nav id="gnb">
+      <button type="button" class="btnNav">Open Navigation</button>
+      <ul>
+        <!-- <a> 클릭시 li에 class="on" 추가  -->
+        <li><a href="#">Choose your device</a>
+          <ul>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="pc.html">PC</a></li>
+            <li class="on"><a href="tv.html">Smart TV</a></li>
+            <li><a href="#">More devices</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About this website</a></li>
+      </ul>
+    </nav>
+    <div id="subTopImageArea" class="tv">
+      <div class="inner">
+        <p class="path"><a href="main.html">Home</a> <span class="arrow">&gt;</span> Choose your device <span class="arrow">&gt;</span></p>
+        <p class="currentPath">TV</p>
+        <p class="desc">Sit back and relax – you’ve got the <br>
+          ultimate protection for your smart TV</p>
+      </div>
+    </div>
+  </header>
+  <main id="subContent">
+    <div class="inner">
+      <h1 class="title">McAfee<SUP>®</SUP> Security for TV</h1>
+      <p class="titleDesc">Help keep your Samsung TV<span class="light">†</span> secure against viruses and threats. You can remove anything suspicious after scanning your apps on TV.<br>
+        <strong>No extra costs.</strong></p>
+      <section class="box">
+        <h2 class="title">HOW TO ACCESS McAfee<sup>®</sup> Security for TV</h2>
+        <div class="slideWrap just_pc">
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Press ‘Smart hub<em class="icoHub"></em>’ button on your remote control and press APPS</span> <img src="../images/tv/tv1.jpg" alt=""> </li>
+              <li><span>2. Find McAfee Security for TV on APPS panel <br>
+                <em class="sub">① Use search bar in the upper right corner of TV screen <br>
+                ② Press a McAfee promotion banner</em></span> <img src="../images/tv/tv2.jpg" alt=""> </li>
+              <li><span>3. Press Open button</span> <img src="../images/tv/tv3.jpg" alt=""> </li>
+              <li><span>4. Press Get started</span> <img src="../images/tv/tv4.jpg" alt=""> </li>
+              <li><span>5. Press Scan My TV regularly to protect your TV from viruses and threats</span> <img src="../images/tv/tv5.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slideWrap just_mobile">
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Press ‘Smart hub<em class="icoHub"></em>’ button on your remote control and press APPS</span> <img src="../images/tv/tv1.jpg" alt=""> </li>
+              <li><span>2. Find McAfee Security for TV on APPS panel <br>
+                <em class="sub">① Use search bar in the upper right corner of TV screen <br>
+                ② Press a McAfee promotion banner</em></span> <img src="../images/tv/tv2.jpg" alt=""> </li>
+              <li><span>3. Press Open button</span> <img src="../images/tv/tv3.jpg" alt=""> </li>
+              <li><span>4. Press Get started</span> <img src="../images/tv/tv4.jpg" alt=""> </li>
+              <li><span>5. Press Scan My TV regularly to protect your TV from viruses and threats</span> <img src="../images/tv/tv5.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="box">
+        <h2 class="title">HOW TO ACCESS Samsung-only special offers</h2>
+        <div class="slideWrap just_pc">
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Check out Samsung exclusive offers by pressing ‘Need protection for your other devices’</span> <img src="../images/tv/other1.jpg" alt=""> </li>
+              <li><span>2. You will see updates and new offers regularly</span> <img src="../images/tv/other2.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="slideWrap just_mobile">
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Check out Samsung exclusive offers by pressing ‘Need protection for your other devices’</span> <img src="../images/tv/other1.jpg" alt=""> </li>
+              <li><span>2. You will see updates and new offers regularly</span> <img src="../images/tv/other2.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="inner">
+        <dl class="annotation">
+          <dt>†</dt>
+          <dd>All smart TV models in 2017 come with pre-installed McAfee® security for TV. The availability may vary by market conditions.</dd>
+        </dl>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"> <span>Copyright &copy;2017 McAfee LLC</span> </footer>
+</div>
+</body>
+</html>

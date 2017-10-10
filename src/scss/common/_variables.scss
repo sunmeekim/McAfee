@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+$base-font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols;
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif, $base-font-emoji !global;
+$base-font-size: 13px !global;
+$base-line-height: 1.43 !global;
+$base-font-color: #000 !global;
+$base-background-color: #FFF !global;
+//$base-placeholder: #CCC !global;
+
+// 고해상도 대응 값
+$ratio: 1.3;
+
+$main-font-family: 'Open Sans', sans-serif;

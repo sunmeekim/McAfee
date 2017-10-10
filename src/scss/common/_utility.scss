@@ -1,0 +1,11 @@
+.blind{
+    overflow:hidden !important;
+    position:absolute !important;
+    height:1px !important;
+    width:1px !important;
+    clip:rect(1px, 1px, 1px, 1px);
+}
+
+.ellipsis{
+    @include ellipsis(block);
+}

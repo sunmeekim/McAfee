@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Dependency directories
+node_modules
+bower_components
+
+# Local environment
+*.iml
+tmp
+.tmp
+.idea
+.idea/
+.DS_Store
+.sonar
+target/
+.sass-cache
+.settings/
+.classpath
+.project
+data.json
+build
+coverage
+local.js
+web/mobile/html
+web/pc/html
+upload_storage
+html_build
+/dist/
+/markup/dist/
+.map

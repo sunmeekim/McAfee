@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>About this website</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="../css/mcafee.css">
+
+<!-- 마크업 확인용 -->
+<script src="../script/jquery.min.js"></script>
+<script src="../script/jquery.bxslider.js"></script>
+<script src="../script/markup.js"></script>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+<!-- //마크업 확인용 -->
+</head>
+<body>
+<div id="wrap"> 
+  <!-- 모바일 메뉴 활성화시 class="navOn" 추가 -->
+  <header id="header">
+    <div id="logo"> <a href="main.html"> <img src="../images/logo.svg" alt="McAfee"> </a> </div>
+    <nav id="gnb">
+      <button type="button" class="btnNav">Open Navigation</button>
+      <ul>
+        <!-- <a> 클릭시 li에 class="on" 추가  -->
+        <li><a href="#">Choose your device</a>
+          <ul>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li><a href="pc.html">PC</a></li>
+            <li><a href="tv.html">Smart TV</a></li>
+            <li><a href="#">More devices</a></li>
+          </ul>
+        </li>
+        <li class="on"><a href="#">About this website</a></li>
+      </ul>
+    </nav>
+    <div id="subTopImageArea" class="about">
+      <div class="inner">
+        <p class="path"><a href="main.html">Home</a> <span class="arrow">&gt;</span> About this website <span class="arrow">&gt;</span></p>
+        <p class="currentPath">About this website</p>
+        <p class="desc">We provides Samsung customers with <br>
+          comprehensive digital security.</p>
+      </div>
+    </div>
+  </header>
+  <main id="subContent">
+    <div class="inner">
+      <h1 class="title">About this website</h1>
+      <p class="context">Protecting every connected device in your home is absolutely essential today as it puts entire home network at risk if one device is attacked. As McAfee is aware of consumer fears that underscores the need for robust cross-device security, our protection is designed to address growing concerns like these across multiple devices.<br>
+        <br>
+        McAfee, one of the world’s leading independent cybersecurity companies, has collaborated with Samsung, one of world's leading electronics companies to provide pre-installed security software protection on Samsung Smart TVs, Samsung PCs, and the Samsung mobile devices worldwide.<sup>†</sup> <br>
+        <br>
+        This website is built for our customers in USA and Korea to learn more about McAfee security solutions pre-installed on their Samsung devices as well as exclusive offers. Additional countries to launch this website will be added throughout the year.</p>
+    </div>
+    <section class="mcafee">
+      <div class="inner">
+        <h2 class="title">About McAfee </h2>
+        <p class="context">McAfee is one of the world’s leading independent cybersecurity companies. Inspired by the power of working together, McAfee creates business and consumer solutions that make the world a safer place. <a href="https://www.mcafee.com" target="_blank">www.mcafee.com</a></p>
+      </div>
+    </section>
+    <div class="inner">
+        <dl class="annotation -center">
+          <dt>†</dt>
+          <dd>The availability may vary by market conditions and device models.</dd>
+        </dl>
+      </div>
+  </main>
+  <footer id="about-footer">
+    <section class="inner">
+      <div class="logoadd">
+        <div class="logo"><img src="../images/logo-white.svg" alt="McAfee"></div>
+        <address class="address">
+        <span>Corporate Headquarters</span> <span>2821 Mission College Blvd.</span> <span>Santa Clara, CA 95054 USA</span>
+        </address>
+      </div>
+      <div class="footer-container">
+        <ul class="footer-menu text-uppercase">
+          <li><a href="https://www.mcafee.com/consumer/en-us/policy/global/legal.html?tab=privacy-notice" target="_blank">Legal Notices</a></li>
+          <li><a href="https://www.mcafee.com/us/about/legal/privacy.aspx" target="_blank">Privacy</a></li>
+          <li><a href="https://www.mcafee.com/us/about/contact-us.aspx" target="_blank">Contact Us</a></li>
+        </ul>
+        <ul class="social-networks">
+          <li><a class="circle-icon-hover icon-twitter" href="https://twitter.com/mcafee_business" target="_blank"></a></li>
+          <li><a class="circle-icon-hover icon-facebook" href="http://www.facebook.com/mcafee" target="_blank"></a></li>
+          <li><a class="circle-icon-hover icon-linkedin" href="https://www.linkedin.com/company/2336?trk=prof-exp-company-name" target="_blank"></a></li>
+          <li><a class="circle-icon-hover icon-youtube" href="http://www.youtube.com/mcafee" target="_blank"></a></li>
+          <li><a class="circle-icon-hover icon-rss" href="https://securingtomorrow.mcafee.com/" target="_blank"></a></li>
+          <li><a class="circle-icon-hover icon-slideshare" href="http://www.slideshare.net/mcafee" target="_blank"></a></li>
+        </ul>
+        <div class="footer-menu-wrap">
+          <p>Copyright &copy;<script>document.write(new Date().getFullYear())</script> McAfee, LLC</p>
+        </div>
+      </div>
+      <a href="//www.scanalert.com/RatingVerify?ref=www.mcafee.com" target="_blank" class="secure padding-bottom-small"><img width="65" height="37" border="0" src="https://images.scanalert.com/meter/www.mcafee.com/55.gif" alt="" /></a>
+    </section>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+// Clear
+@mixin clearfix{
+    &:before, &:after{
+        display: table;
+        content: ' ';
+    }
+
+    &:after{
+        clear: both;
+    }
+}
+
+@mixin ellipsis($display:inline-block, $max-width:100%, $type:null){
+	@if ($display != null) and ($type != flex_item) {
+        display: $display;
+	}
+
+    overflow: hidden;
+	@if $type == flex_item {
+		min-width: 0;
+	} @else {
+		max-width: $max-width;
+	}
+    white-space: nowrap;
+    word-break: normal;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+
+@mixin multi-ellipsis($lines:2, $font-size:$base-font-size, $line-height:$base-line-height, $display:block){
+    overflow:hidden;
+	display:$display;
+	display:-webkit-box;
+    max-height:$font-size*$line-height*$lines;
+    font-size:$font-size;
+    text-overflow:ellipsis;
+    line-height:$line-height;
+    -webkit-line-clamp:$lines;
+    -webkit-box-orient:vertical;
+}
+
+@mixin use-sprite-normal($filename, $map:$spr_img, $retinaMap:null, $retina:false, $important:null, $mediaquery:false, $x2:false, $display:inline-block, $loopEnd:false) {
+    @include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2, $display, $loopEnd);
+}
+
+@mixin use-sprite-retina($filename, $map:$spr_img_2x, $retinaMap:null, $retina:true, $important:null, $mediaquery:false, $x2:false, $display:inline-block, $loopEnd:false) {
+	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2, $display, $loopEnd);
+}
+
+@mixin use-sprite-important($filename, $map:$spr_img, $retinaMap:$spr_img_2x, $retina:false, $important:true, $mediaquery:false, $x2:false, $display:inline-block, $loopEnd:false) {
+	@include use-sprite($filename, $map, $retinaMap, $retina, $important, $mediaquery, $x2, $display, $loopEnd);
+}
+
+@mixin use-sprite($filename, $map:$spr_img, $retinaMap:null, $retina:false, $important:null, $mediaquery:false, $x2:false, $display:inline-block, $loopEnd:false) {
+	$dimension-map: map-get($map, $filename);
+	$spritesheet-name: map-get($map, spritesheet_name);
+	$spritesheet-image: map-get($map, spritesheet_image);
+	$importantTxt: null !default;
+    $width: null !default;
+    $height: null !default;
+    $bgOffsetX: null !default;
+    $bgOffsetY: null !default;
+    $bgSize: null !default;
+
+	@if $important {
+		$importantTxt : unquote('!important');
+	}
+
+	@if $retina {
+		$width: ceil(map-get($dimension-map, width_retina));
+		$height: ceil(map-get($dimension-map, height_retina));
+		$bgOffsetX: floor(map-get($dimension-map, offset_x_retina));
+		$bgOffsetY: ceil(map-get($dimension-map, offset_y_retina));
+		$bgSize: ceil(map-get($map, total_width_retina)) auto;
+	} @else {
+		$width: map-get($dimension-map, width);
+		$height: map-get($dimension-map, height);
+		$bgOffsetX: map-get($dimension-map, offset_x);
+		$bgOffsetY: map-get($dimension-map, offset_y);
+		$bgSize: map-get($map, total_width) auto;
+	}
+
+	@if $mediaquery {
+		@include hdpi {
+			& {
+				width: $width $importantTxt;
+				height: $height $importantTxt;
+				background-position: $bgOffsetX $bgOffsetY $importantTxt;
+				background-size: $bgSize $importantTxt;
+				@include sprite($spritesheet-image, $important, $display, $loopEnd);
+			}
+		}
+	} @else {
+		width: $width $importantTxt;
+		height: $height $importantTxt;
+		background-position: $bgOffsetX $bgOffsetY $importantTxt;
+
+		@if $retina {
+			background-size: $bgSize $importantTxt;
+		}
+
+		@include sprite($spritesheet-image, $important, $display, $loopEnd);
+	}
+
+	@if $x2 {
+		@include use-sprite-retina($filename:$filename, $map:$retinaMap, $retinaMap:null, $retina:true, $important:$important, $mediaquery:true, $x2:false, $display:$display, $loopEnd:true);
+	}
+}
+
+@mixin sprite($image:null, $important:null, $display:null, $loopEnd:false){
+	$selector: quote(selector_parse(&));
+	$pseudoSelector: false !default;
+
+	@if $important {
+		$important : unquote('!important');
+	}
+
+	//가상 셀렉터 체크
+	@if str-length($selector) >= 6 and (str-slice($selector, -6) == ':after' or str-slice($selector, -7) == ':before') {
+		$pseudoSelector: true;
+	}
+
+	@if $loopEnd == false {
+		overflow: hidden;
+		display: $display;
+		background-repeat: no-repeat;
+
+		@if $pseudoSelector {
+			content: '';
+		} @else {
+			text-indent: -999px;
+		}
+	}
+
+	background-image: url(unquote(#{$image})) $important;
+}
+
+@mixin overflowScrollY{
+    overflow:hidden;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+@mixin isMobile($width: 768px) {
+	@media screen and (max-width: $width){
+		@content;
+	}
+}
+
+@mixin hdpi($ratio: 1.3){
+    @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+    only screen and (min--moz-device-pixel-ratio: $ratio),
+    only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+    only screen and (min-resolution: #{round($ratio*96)}dpi),
+    only screen and (min-resolution: #{$ratio}dppx) {
+        @content;
+    }
+}

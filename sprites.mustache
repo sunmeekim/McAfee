@@ -1,0 +1,19 @@
+${{spritesheet_name}}: (
+    spritesheet_name: {{spritesheet_name}},
+    spritesheet_image: '{{{spritesheet.escaped_image}}}',
+    total_width: {{#options.removepx}}{{spritesheet.width}}{{/options.removepx}}px,
+    total_height: {{#options.removepx}}{{spritesheet.height}}{{/options.removepx}}px,
+    total_width_retina: {{#options.removepx}}{{#options.retina}}{{spritesheet.width}}{{/options.retina}}{{/options.removepx}},
+    total_height_retina: {{#options.removepx}}{{#options.retina}}{{spritesheet.height}}{{/options.retina}}{{/options.removepx}},
+    {{#items}}
+        {{name}}: (
+            offset_x: {{#options.removepx}}{{px.offset_x}}{{/options.removepx}},
+            offset_y: {{#options.removepx}}{{px.offset_y}}{{/options.removepx}},
+            width: {{#options.removepx}}{{px.width}}{{/options.removepx}},
+            height: {{#options.removepx}}{{px.height}}{{/options.removepx}},
+            offset_x_retina: {{#options.removepx}}{{#options.retina}}{{px.offset_x}}{{/options.retina}}{{/options.removepx}},
+            offset_y_retina: {{#options.removepx}}{{#options.retina}}{{px.offset_y}}{{/options.retina}}{{/options.removepx}},
+            width_retina: {{#options.removepx}}{{#options.retina}}{{px.width}}{{/options.retina}}{{/options.removepx}},
+            height_retina: {{#options.removepx}}{{#options.retina}}{{px.height}}{{/options.retina}}{{/options.removepx}}),
+    {{/items}}
+);

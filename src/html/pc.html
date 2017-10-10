@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>PC</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="../css/mcafee.css">
+
+<!-- 마크업 확인용 -->
+<script src="../script/jquery.min.js"></script>
+<script src="../script/jquery.bxslider.js"></script>
+<script src="../script/markup.js"></script>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+<!-- //마크업 확인용 -->
+</head>
+<body>
+<div id="wrap"> 
+  <!-- 모바일 메뉴 활성화시 class="navOn" 추가 -->
+  <header id="header">
+    <div id="logo"> <a href="main.html"> <img src="../images/logo.svg" alt="McAfee"> </a> </div>
+    <nav id="gnb">
+      <button type="button" class="btnNav">Open Navigation</button>
+      <ul>
+        <!-- <a> 클릭시 li에 class="on" 추가  -->
+        <li><a href="#">Choose your device</a>
+          <ul>
+            <li><a href="mobile.html">Mobile</a></li>
+            <li class="on"><a href="pc.html">PC</a></li>
+            <li><a href="tv.html">Smart TV</a></li>
+            <li><a href="#">More devices</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About this website</a></li>
+      </ul>
+    </nav>
+    <div id="subTopImageArea" class="pc">
+      <div class="inner">
+        <p class="path"><a href="main.html">Home</a> <span class="arrow">&gt;</span> Choose your device <span class="arrow">&gt;</span></p>
+        <p class="currentPath">PC</p>
+        <p class="desc">Shield your digital lives and navigate it <br>
+          with confidence. </p>
+      </div>
+    </div>
+  </header>
+  <main id="subContent">
+    <div class="inner">
+      <h1 class="title">McAfee<SUP>®</SUP> LiveSafe</h1>
+      <p class="titleDesc">Protect you and your Samsung PC from ransomware, viruses and online threats by activating McAfee LiveSafe <strong>60-day Free trial</strong>. You will <strong>receive a special offer price</strong> exclusively prepared for Samsung PC users<span class="light">†</span> after free trial.</p>
+      <section class="box">
+        <h2 class="title">HOW TO ACCESS McAfee<SUP>®</SUP> LiveSafe</h2>
+        <div class="slideWrap just_pc"> 
+          <!--<button class="btnPrev"><span class="blind">Previous Slide</span></button>-->
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Find the McAfee shield icon in the taskbar and click it</span> <img src="../images/pc/pc1.jpg" alt=""> </li>
+              <li><span>2. Follow the set up process by clicking Get started</span> <img src="../images/pc/pc2.jpg" alt=""> </li>
+              <li><span>3. Scan your PC and start ULTIMATE antivirus, identity and privacy protection. We’ve got your back in real time</span> <img src="../images/pc/pc3.jpg" alt=""> </li>
+            </ul>
+          </div>
+          <!--<button class="btnNext"><span class="blind">Next Slide</span></button>--> 
+        </div>
+        <div class="slideWrap just_mobile">
+          <div class="listWrap">
+            <ul class="list bxslider">
+              <li><span>1. Find the McAfee shield icon in the taskbar and click it </span> <img src="../images/pc/pc1.jpg" alt=""> </li>
+              <li><span>2. Follow the installation process by clicking Get started</span> <img src="../images/pc/pc2.jpg" alt=""> </li>
+              <li><span>3. Scan your PC and start identity and privacy protection. We’ve got your back in real time</span> <img src="../images/pc/pc3.jpg" alt=""> </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="keyFeatures">
+      <div class="inner">
+        <h2 class="title">Key features</h2>
+        <ul>
+          <li class="feature1"> <span class="icon"></span> <span class="text">Blocks viruses, malware,<br>
+            ransomware, spyware and more</span></li>
+          <li class="feature2"> <span class="icon"></span> <span class="text">Protect all of your PCs,<br>
+            smartphones and tablets <sup>††</sup></span></li>
+          <li class="feature3"> <span class="icon"></span> <span class="text">Browse, bank,<br>
+            and shop safely online</span></li>
+          <li class="feature4"> <span class="icon"></span> <span class="text">Manager your password<br>
+            with The True Key app<sup>TM</sup> </span></li>
+          <li class="feature5"> <span class="icon"></span> <span class="text">Remove junk mail<br>
+            before it reaches your inbox</span></li>
+          <li class="feature6"> <span class="icon"></span> <span class="text">Free customer support for the lifetime<br>
+            of your subscription</span></li>
+        </ul>
+      </div>
+    </section>
+    <div class="inner">
+      <dl class="annotation">
+        <dt>†</dt>
+        <dd>All notebook models in 2017 come with pre-installed McAfee® LiveSafe. The availability may vary by market conditions.</dd>
+        <dt>††</dt>
+        <dd>License applies to personal use on supported devices you own during your subscription; see system requirements for details. Some features require
+          additional configuration and/or hardware. To find out if your device is supported,<br>
+          go to : <a href="https://www.mcafee.com/SystemRequirements" target="_blank">www.mcafee.com/SystemRequirements</a></dd>
+        </dl>
+    </div>
+  </main>
+  <footer id="footer"> <span>Copyright &copy;2017 McAfee LLC</span> </footer>
+</div>
+</body>
+</html>
